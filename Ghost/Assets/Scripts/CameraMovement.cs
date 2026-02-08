@@ -5,6 +5,11 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] float sensitivity = 120f;
     [SerializeField] Transform playerBody;
     
+    // clamp limits for pitch (x) and yaw (y)
+    [SerializeField] float xClampMin = -90f;
+    [SerializeField] float xClampMax = 90f;
+
+
     public float xRotation = 0;
     public float yRotation = 0;
     void Start()
@@ -26,12 +31,16 @@ public class CameraMovement : MonoBehaviour
 
         yRotation += mouseX;
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
+        // clamp pitch and yaw
+        xRotation = Mathf.Clamp(xRotation, xClampMin, xClampMax);
+
+        // apply pitch to camera
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        // apply clamped yaw to player body (absolute, not incremental)
         if (playerBody != null)
         {
-            playerBody.Rotate(Vector3.up * mouseX);
+            playerBody.localRotation = Quaternion.Euler(0f, yRotation, 0f);
         }
         
     } 
