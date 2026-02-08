@@ -4,7 +4,7 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] float sensitivity = 120f;
     [SerializeField] Transform playerBody;
-
+    
     public float xRotation = 0;
     public float yRotation = 0;
     void Start()
