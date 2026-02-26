@@ -1,20 +1,22 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class EnemyMove : MonoBehaviour
 {
     [Header("Patrol Settings")]
+    [SerializeField] float seeSpeed = 10;
     public float patrolRadius = 10f;
     public float patrolWaitTime = 3f;
-
+    
     float patrolTimer;
-
+    
     public AudioClip scarysound;
     [SerializeField] AudioSource seesound;
     public NavMeshAgent agent;
     public Transform player;
-
+    
     [Header("FOV Settings")]
     public float viewRadius = 10f;
     [Range(0, 360)]
@@ -29,7 +31,19 @@ public class EnemyMove : MonoBehaviour
 
     float loseTimer;
     bool isChasing;
+    
+    [Header("Animation Settings")]
+    [SerializeField] Animator animator;
+    [SerializeField] string idleParam = "Idle";
+    [SerializeField] string walkParam = "Walk";
+    [SerializeField] string runParam = "Run";
+    [SerializeField] float moveThreshold = 0.05f;
 
+    float defSpeed;
+    void Start()
+    {
+        defSpeed = agent.speed;
+    }
 
     void Update()
     {
@@ -40,6 +54,7 @@ public class EnemyMove : MonoBehaviour
             loseTimer = 0f;
             isChasing = true;
             agent.SetDestination(player.position);
+            agent.speed = seeSpeed;
         }
         else if (isChasing)
         {
@@ -49,17 +64,21 @@ public class EnemyMove : MonoBehaviour
             {
                 agent.SetDestination(player.position);
             }
-            else
+            else 
             {
                 isChasing = false;
+                agent.speed = defSpeed;
                 agent.ResetPath();
-                seesound.Stop();
+
+                if(seesound != null) seesound.Stop();
             }
         }
         else
         {
             Patrol();
         }
+
+        UpdateAnimationState();
     }
 
 
@@ -81,7 +100,7 @@ public class EnemyMove : MonoBehaviour
 
             if (!Physics.Raycast(transform.position, dirToTarget, dist, obstacleMask))
             {
-                if (!playerVisible)
+                if (!playerVisible && scarysound != null)
                 {
                     seesound.PlayOneShot(scarysound);
                 }
@@ -117,6 +136,20 @@ public class EnemyMove : MonoBehaviour
             agent.SetDestination(randomPoint);
             patrolTimer = 0f;
         }
+    }
+
+    void UpdateAnimationState()
+    {
+        if (animator == null) return;
+
+        bool isMoving = agent.velocity.sqrMagnitude > moveThreshold * moveThreshold;
+        bool isRunning = isChasing && isMoving;
+        bool isWalking = !isChasing && isMoving;
+        bool isIdle = !isMoving;
+
+        animator.SetBool(idleParam, isIdle);
+        animator.SetBool(walkParam, isWalking);
+        animator.SetBool(runParam, isRunning);
     }
 
     void OnDrawGizmosSelected()

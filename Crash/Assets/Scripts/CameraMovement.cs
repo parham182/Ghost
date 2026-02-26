@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
 
     float xRotation;
     float yRotation;
-
+    
     void Start()
     {
         if (playerBody == null)

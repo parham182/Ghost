@@ -1,0 +1,182 @@
+# Blender 5.0.1 MTL File: 'psx-low-poly-survival-props-pack.blend'
+# www.blender.org
+
+newmtl ammo
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/ammo.png
+
+newmtl axe
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/axe.png
+
+newmtl bandage
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/bandage.png
+
+newmtl battery
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/battery.png
+
+newmtl double_barrel_shotgun
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/double_barrel_shotgun.png
+
+newmtl double_barrel_shotgun_metal
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.100000
+d 1.000000
+illum 2
+
+newmtl fabric_green_medical_kit
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/fabric_green_medical_kit.png
+
+newmtl fabric_red_medical_kit
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/fabric_red_medical_kit.png
+
+newmtl flare_gun
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/flare_gun.png
+
+newmtl flashlight
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/flashlight.png
+
+newmtl machete
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/machete.png
+
+newmtl medicine
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/medicine.png
+
+newmtl medicines
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/medicines.png
+
+newmtl revolver
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/revolver.png
+
+newmtl rifle
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/rifle.png
+
+newmtl walkie
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/walkietalkie.png
+
+newmtl wooden_bat
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/wooden_bat.png
+
+newmtl worn_gray_metal
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:/Users/Aitor/Desktop/Packs_23_01_26/PSX Low-Poly Survival Props Pack/Textures/worn_gray_metal.png

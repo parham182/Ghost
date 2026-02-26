@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    
     [Header("Hand / Held Item")]
     public Transform hand;
     public Transform heldItem;
@@ -25,30 +26,38 @@ public class Item : MonoBehaviour
             return false;
         }
 
+        var hadHeldItem = heldItem != null;
+        var targetLocalPosition = heldLocalPosition;
+        var targetLocalRotation = Quaternion.Euler(heldLocalEulerAngles);
+
         // Drop held item to ground item position
         if (heldItem != null)
         {
+            targetLocalPosition = heldItem.localPosition;
+            targetLocalRotation = heldItem.localRotation;
+
             var dropPos = groundItem.position;
             var dropRot = groundItem.rotation;
 
-            SetHeldState(heldItem, false);
             heldItem.SetParent(null, true);
             heldItem.position = dropPos;
             heldItem.rotation = dropRot;
+            SetHeldState(heldItem, false);
         }
 
         // Pick up ground item into hand
         heldItem = groundItem;
         SetHeldState(heldItem, true);
         heldItem.SetParent(hand, true);
-        heldItem.localPosition = heldLocalPosition;
-        heldItem.localRotation = Quaternion.Euler(heldLocalEulerAngles);
+        heldItem.localPosition = hadHeldItem ? targetLocalPosition : heldLocalPosition;
+        heldItem.localRotation = hadHeldItem ? targetLocalRotation : Quaternion.Euler(heldLocalEulerAngles);
 
         return true;
     }
 
     void SetHeldState(Transform item, bool isHeld)
     {
+        if (item == null) return;
         if (!disablePhysicsWhileHeld) return;
 
         var rb = item.GetComponent<Rigidbody>();
