@@ -63,6 +63,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.ide.vscode": {
+      "version": "file:C:/Users/User/Desktop/com.unity.ide.vscode-next-master/Packages/com.unity.ide.vscode",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.inputsystem": {
       "version": "1.18.0",
       "depth": 0,
